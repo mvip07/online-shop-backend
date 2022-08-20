@@ -42,13 +42,13 @@ app.get("/all/about/companys", aboutCompany.getAboutCompanys);
 app.get("/selected/about/company/:id", aboutCompany.getAboutCompanyDetail);
 app.delete("/delete/about/company/:id", isAuth, aboutCompany.deleteAboutCompany);
 app.post("/create/about/company", isAuth, aboutCompany.createAboutCompany);
-app.post("/update/about/company", isAuth, aboutCompany.createAboutCompany);
+app.post("/update/about/company", isAuth, aboutCompany.getAboutCompanyUpdate);
 
 app.get("/all/about/team/membears", aboutTeamMembear.getAboutTeamMembars);
 app.get("/selected/about/team/membear/:id", aboutTeamMembear.getAboutTeamMembarDetail);
 app.delete("/delete/about/team/membear/:id", isAuth, aboutTeamMembear.deleteAboutTeamMembar);
 app.post("/create/about/team/membear", isAuth, aboutTeamMembear.createAboutTeamMembar);
-app.post("/update/about/team/membear", isAuth, aboutTeamMembear.createAboutTeamMembar);
+app.post("/update/about/team/membear", isAuth, aboutTeamMembear.getAboutTeamMembarUpdate);
 
 app.get("/all/blogs", blog.getBlogs);
 app.get("/selected/blog/:id", blog.getBlogDetail);
@@ -66,8 +66,6 @@ app.post("/user/login", authControllerUser.login);
 app.post("/user/register", authControllerUser.signup);
 app.post("/user/update/account", authControllerUser.getUserUpdate);
 app.get("/user/:id", authControllerUser.getUserDetail);
-
-
 
 app.post("/admin/login", authControllerAdmin.login);
 app.post("/admin/register", authControllerAdmin.signup);
