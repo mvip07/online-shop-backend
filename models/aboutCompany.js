@@ -23,7 +23,7 @@ class AboutCompany {
         });
     };
 
-    static getAboutCompanytDetail(id) {
+    static getAboutCompanyDetail(id) {
         const db = getDb();
         return db.collection("aboutCompanys").findOne({ _id: ObjectId(id) }).then(aboutCompany => aboutCompany);
     };
