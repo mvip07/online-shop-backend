@@ -4,7 +4,7 @@ const { ObjectId } = require("mongodb");
 class Category {
     constructor(icon, categoryName) {
         this.icon = icon;
-        this.category = categoryName;
+        this.categoryName = categoryName;
         this.createdDate = new Date();
     }
 
