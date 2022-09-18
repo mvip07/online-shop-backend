@@ -20,7 +20,7 @@ class AboutTeamMembar {
         return db.collection("aboutTeamMembers").find({}).toArray().then(aboutTeamMembars => {
             return aboutTeamMembars.map(aboutTeamMembar => {
                 return {
-                    id: aboutTeamMembar._id,
+                    _id: aboutTeamMembar._id,
                     title: aboutTeamMembar.title,
                     job: aboutTeamMembar.job,
                     description: aboutTeamMembar.description,

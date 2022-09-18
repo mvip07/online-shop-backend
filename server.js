@@ -9,6 +9,7 @@ const blog = require("./controllers/blog")
 const advertising = require("./controllers/advertising")
 const bag = require("./controllers/bag")
 const category = require("./controllers/category")
+const faq = require("./controllers/faq")
 
 const authControllerUser = require("./controllers/user");
 const authControllerAdmin = require("./controllers/adminUser")
@@ -76,11 +77,17 @@ app.get("/all/bag/:userId", isAuth, bag.getBags)
 app.post("/create/bag/:userId", isAuth, bag.createBag)
 app.delete("/delete/bag/:userId/:id", isAuth, bag.deleteBag)
 
-app.get("/all/categoys", isAuth, category.getCategory);
+app.get("/all/categorys", isAuth, category.getCategory);
 app.get("/selected/category/:id", isAuth, category.getCategoryDetail);
 app.delete("/delete/category/:id", isAuth, category.deleteCategory);
 app.post("/create/category", isAuth, category.createCategory);
 app.post("/update/category", isAuth, category.getCategoryUpdate);
+
+app.get("/all/faqs", isAuth, faq.getFaq);
+app.get("/selected/faq/:id", isAuth, faq.getFaqDetail);
+app.delete("/delete/faq/:id", isAuth, faq.deleteFaq);
+app.post("/create/faq", isAuth, faq.createFaq);
+app.post("/update/faq", isAuth, faq.getFaqUpdate);
 
 mongoConnect(() => {
   app.listen(process.env.PORT || 8000, () => console.log("Server Started!"));

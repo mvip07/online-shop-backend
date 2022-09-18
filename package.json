@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yakohere/bilarmidiz-back.git"
+    "url": "git+https://github.com/mirabzal-07/online-shop-backend"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yakohere/bilarmidiz-back/issues"
+    "url": "https://github.com/mirabzal-07/online-shop-backend/issues"
   },
-  "homepage": "https://github.com/yakohere/bilarmidiz-back#readme"
+  "homepage": "https://github.com/mirabzal-07/online-shop-backend#readme"
 }

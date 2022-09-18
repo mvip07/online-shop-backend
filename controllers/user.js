@@ -34,6 +34,15 @@ exports.login = async (req, res, next) => {
                 user: {
                     id: currentUser._id,
                     user: currentUser.email,
+                    firstname: currentUser.firstname,
+                    lastname: currentUser.lastname,
+                    fax: currentUser.fax,
+                    city: currentUser.city,
+                    country: currentUser.country,
+                    company: currentUser.company,
+                    address1: currentUser.address1,
+                    address2: currentUser.address2,
+                    postCode: currentUser.postCode    
                 },
             });
         })

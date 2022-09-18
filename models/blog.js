@@ -16,7 +16,7 @@ class Blog {
         return db.collection("blogs").find({}).toArray().then(blogs => {
             return blogs.map(blog => {
                 return {
-                    id: blog._id,
+                    _id: blog._id,
                     title: blog.title,
                     description: blog.description,
                     postIntruder: blog.postIntruder,

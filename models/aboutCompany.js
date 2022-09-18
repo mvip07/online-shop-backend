@@ -14,7 +14,7 @@ class AboutCompany {
         return db.collection("aboutCompanys").find({}).toArray().then(aboutCompanys => {
             return aboutCompanys.map(aboutCompany => {
                 return {
-                    id: aboutCompany._id,
+                    _id: aboutCompany._id,
                     image: aboutCompany.image,
                     title: aboutCompany.title,
                     date: aboutCompany.createdDate

@@ -14,7 +14,7 @@ class Category {
         return db.collection("categorys").find({}).toArray().then(categorys => {
             return categorys.map(category => {
                 return {
-                    id: category._id,
+                    _id: category._id,
                     icon: category.icon,
                     categoryName: category.categoryName,
                     date: category.createdDate

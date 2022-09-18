@@ -26,7 +26,7 @@ class Product {
         return db.collection("products").find({}).toArray().then(products => {
             return products.map(product => {
                 return {
-                    id: product._id,
+                    _id: product._id,
                     title: product.title,
                     brand: product.brand,
                     color: product.color,

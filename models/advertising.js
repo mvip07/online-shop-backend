@@ -15,7 +15,7 @@ class Advertising {
         return db.collection("advertisings").find({}).toArray().then(advertisings => {
             return advertisings.map(advertising => {
                 return {
-                    id: advertising._id,
+                    _id: advertising._id,
                     firma: advertising.firma,
                     type: advertising.type,
                     image: advertising.image,
